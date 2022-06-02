@@ -1,6 +1,6 @@
 # Abstract Factory
 
-Recentemente precisei trazer uma explicação sobre Abstract Factory, e decidi subir o código de exemplo no git também.
+Recentemente no trampo precisei trazer uma explicação sobre Abstract Factory, e decidi subir o código de exemplo no git também.
 
 ## Apresentando o tema:
 O Abstract Factory é um padrão de projeto criacional que permite que você produza famílias de objetos relacionados sem ter que especificar suas classes concretas.
@@ -12,5 +12,7 @@ Criamos formas de criar famílias de objetos relacionados (uma venda é relacion
 
 No nosso exemplo, temos as famílias de serviço ou produto, e a relação entre elas é a venda e o imposto. Sempre que eu crio uma venda relacionada ao SERVIÇO, o imposto também deve estar relacionado ao serviço.
 
+## Código
+Quando a aplicação inicia no 'venda.php', é definido o que vou chamar, se será instanciado a classe 'VendaServicoFactory', ou 'VendaProdutoFactory'. A aplicação usa essa informação para criar um objeto fábrica de uma classe que corresponde com a venda solicitada. O resto do código usa essa fábrica pra criar a venda produto, ou venda serviço. Isso previne que impostos errados sejam criados.
 ## Outros exemplos
 [Aqui](https://refactoring.guru/design-patterns/abstract-factory) você pode ler alguns outros exemplos sobre o pattern.
